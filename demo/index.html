@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>反向代理解决跨域</title>
+</head>
+<body>
+	<div style="margin: 100px">
+		<span>12312123</span>
+
+		<button onclick="submit()">Sumbit</button>
+	</div>
+
+</body>
+<script type="text/javascript">
+	function submit(){
+		let url = '/api/monitor/';
+		let data = {'test': '123'};
+		let xml = new XMLHttpRequest();
+		xml.open('POST', url, true);
+		xml.setRequestHeader("Content-Type", 'application/json; charset=utf-8');
+		xml.send(JSON.stringify(data));
+	}
+</script>
+</html>
